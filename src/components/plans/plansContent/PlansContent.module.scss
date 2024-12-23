@@ -1,0 +1,82 @@
+@import '../../../styles/index.scss';
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.plans__type {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.plans__icons {
+  display: flex;
+  padding: .6rem 1.2rem;
+  background-color: $white;
+  border-radius: 0.8rem;
+  @include vp_1024 {
+    display: none;
+  }
+}
+
+.plans__icon {
+  padding: 0.7rem 0.6rem;
+  background-color: transparent;
+  border-radius: .6rem;
+  height: 3.2rem;
+  width: 3.2rem;
+  transition: all $transition;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue;
+
+    .plans__tableTypeIcon,
+    .plans__listTypeIcon {
+      color: $white;
+    }
+  }
+}
+
+.plans__title {
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 120%;
+  color: $blue_medium;
+  color: $black-v2;
+  opacity: 0.6;
+
+  @include vp_991 {
+    line-height: 140%;
+  }
+
+  // @include min_vp_575 {
+  //   @include RubberSize(font-size, 16, 12, 4);
+  // }
+}
+
+.plans__tableTypeIcon,
+.plans__listTypeIcon {
+  color: $gray_icon;
+  height: 1.8rem;
+  width: 2rem;
+}
+
+.plans__icon--active {
+  background-color: $gold;
+
+  &:hover {
+    background-color: $gold;
+  }
+
+  .plans__tableTypeIcon,
+  .plans__listTypeIcon {
+    color: $white;
+    height: 1.8rem;
+    width: 2rem;
+  }
+}
+

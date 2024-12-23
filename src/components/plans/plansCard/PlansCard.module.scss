@@ -1,0 +1,126 @@
+@import '../../../styles/index.scss';
+
+.plansCard-wrapper {
+  cursor: pointer;
+}
+
+.plansCard {
+  background: $white;
+  text-align: left;
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  @include vp_1024 {
+    padding: 2rem
+  }
+}
+
+.plansCard__title {
+  @include Manrope_bold;
+  font-size: 2.4rem;
+  color: $black;
+  margin-bottom: 1.6rem;
+}
+
+.plansCard__image {
+  width: 100%;
+  border-radius: 1.2rem;
+}
+
+.plansCard__common {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.plansCard__chip {
+  font-size: 1.6rem;
+  background-color: $gold24;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  width: fit-content;
+}
+
+.plansCard__info {
+  color: $black-v2;
+  display: flex;
+  gap: 0.8rem;
+
+  & span {
+    width: 1px;
+    height: 1.5rem;
+    background-color: $black;
+    opacity: 0.24;
+  }
+}
+
+.plansCard__columnRoom,
+.plansCard__area,
+.plansCard__floor {
+  @include Manrope_semibold;
+  font-size: 1.6rem;
+}
+
+.plansCard__area {
+  display: flex
+}
+
+.plansCard__prices {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.plansCard__price {
+  @include Manrope_semibold;
+  font-size: 3.6rem;
+  color: $black-v3;
+}
+
+.plansCard__credit {
+  font-size: 1.6rem;
+  color: $black-v2;
+}
+
+///////////////////
+.plansCard-list {
+  height: 19.5rem;
+  width: 100%;
+  display: flex;
+  background-color: $white;
+  padding: 2.4rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 1.2rem;
+
+  .plansCard__title {
+
+    margin-bottom: unset;
+  }
+
+  .plansCard__image {
+    height: 100%;
+    object-fit: contain;
+    width: 22.932rem;
+  }
+
+  .plansCard__prices {
+    align-items: flex-start;
+  }
+}
+
+.plansCard-common {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.plansCard__content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

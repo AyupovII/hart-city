@@ -1,0 +1,37 @@
+@import '../../styles/index.scss';
+
+.mainLayout {
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    @include vp_1024 {
+        flex-direction: column;
+    }
+}
+
+.mainLayout__content {
+    position: relative;
+    // min-width: calc(100% - 11rem);
+    // left: -5rem;
+    pointer-events: none;
+    width: 100%;
+}
+
+.content {
+    pointer-events: all;
+    z-index: 1;
+    background: $blue_light;
+    // min-width: calc(100% - 11rem);
+    // width: calc(100% - 5rem);
+    margin: 2.4rem 2.4rem 2.4rem 0;
+    border-radius: 1.2rem;
+    // padding-left: 21rem;
+    position: relative;
+    // right: -5rem;
+    height: calc(100% - 4.8rem);
+
+    @include vp_1024 {
+        margin: 0;
+    }
+}

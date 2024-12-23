@@ -1,0 +1,127 @@
+@import '../../styles/index.scss';
+
+.apartmentSliders {
+    flex:2;
+    // width: 100%;
+    // min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    border-radius: 1.2rem;
+    padding: 3.6rem 2rem;
+    gap: 2rem;
+    justify-content: space-between;
+    // max-height: 61.1rem;
+    // min-width: 32rem;
+    @include vp_1280 {
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    & .swiper-button-prev,
+    & .swiper-button-next {
+        background-color: $blue-light;
+    }
+}
+
+.apartmentSliders__wrapper {
+    max-width: 90.4rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @include vp_1800 {
+        max-width: 70rem;
+    }
+    @include vp_1600 {
+        max-width: 63rem;
+    }
+    @include vp_1440 {
+        max-width: 62rem;
+    }
+    @include vp_1366 {
+        max-width: 50rem;
+    }
+    @include vp_1280 {
+        max-width: 45rem;
+    }
+    @include vp_1140 {
+        max-width: 40rem;
+    }
+    @include vp_1024 {
+        max-width: 35rem;
+    }
+    @include vp_768 {
+        max-width: 30rem;
+    }
+    @include vp_575 {
+        max-width: 28rem;
+    }
+}
+
+.apartmentSliders__swiper {
+    width: 100%;
+}
+
+.apartmentSliders__slide {
+    text-align: center;
+    width: 100% !important;
+    width: min-content;
+    padding: 4rem;
+
+}
+
+.apartmentSliders__image {
+    object-fit: contain;
+    // max-height: 100%;
+    // width: auto;
+    // max-height: 38.4rem;
+}
+
+.thumbs {
+    width: 100%;
+    display: flex;
+
+    @include vp_1024 {
+        flex-wrap: wrap;
+    }
+
+}
+
+.thumbs__slide {
+    padding: 1.2rem 2.4rem;
+    border: 1px solid $blue-light;
+    text-align: center;
+    cursor: pointer;
+    border-radius: .4rem;
+    border: 1px solid $blue-light;
+    max-height: 3.8rem;
+    transition: background-color $transition;
+    width: fit-content !important;
+
+    &:hover {
+        background-color: $gold_semi_light;
+    }
+}
+
+.thumbs__button {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    // width: fit-content;
+    // max-width: fit-content;
+}
+
+.thumb__icon {
+    width: 16px;
+    // height: 14px;
+    object-fit: cover;
+}
+
+.thumb__text {
+    font-size: 1.2rem;
+    color: $blue;
+    white-space: nowrap;
+}

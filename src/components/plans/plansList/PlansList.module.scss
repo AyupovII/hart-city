@@ -1,0 +1,24 @@
+@import '../../../styles/index.scss';
+
+.plansList {}
+
+.plansList__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include vp_1280 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    @include vp_768 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.plansList__content--list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

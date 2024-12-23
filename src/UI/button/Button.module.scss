@@ -1,0 +1,318 @@
+@import '../../styles/index.scss';
+@import '../../styles/breakpoints.scss';
+
+.button {
+    position: relative;
+    @include Manrope_light;
+    display: flex;
+    gap: 0.8rem;
+    max-width: fit-content;
+    text-align: center;
+    line-height: 120%;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+    border: none;
+    overflow: hidden;
+    transition: all .2s ease-out;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    @include RubberSize(font-size, 18, 14, 14);
+
+    @include vp_991 {
+        user-select: none;
+    }
+
+    @include vp_768 {
+        min-width: 100%;
+    }
+
+    /* Размеры */
+    &_large {
+        padding: 1.8rem 2.4rem;
+
+        // @include desktop_extra {
+        // 	height: 56px;
+        // }	
+
+        // @include vp_991 {
+        //     padding: 1.2rem 2.4rem;
+        //     // height: 44px;
+        // }
+    }
+
+    &_medium {
+        padding: 1.6rem 2.4rem;
+    }
+
+    &_long {
+        padding: 1.4rem 6.4rem;
+    }
+
+    &_middle {
+        padding: 1.4rem 2.4rem;
+
+        @include vp_991 {
+            padding: 1.2rem 2.4rem;
+        }
+    }
+
+    &[data-theme="blue"] {
+        color: $white;
+        background-color: $blue;
+
+        &:hover {
+            background-color: $gold;
+        }
+    }
+
+    &[data-theme="white"] {
+        color: $blue;
+        background-color: $white;
+
+        &:hover {
+            background-color: $gold_semi_light;
+        }
+
+        & .downloadIcon {
+            color: $blue;
+        }
+    }
+
+    &[data-theme="gray"] {
+        color: $white;
+        background-color: $white20;
+
+        &:hover {
+            background-color: $gold;
+        }
+    }
+
+    &[data-theme="darkGray"] {
+        color: $blue;
+        background-color: $dark_gray_v2;
+        backdrop-filter: blur(50px);
+        &:hover {
+            background-color: $gold;
+        }
+    }
+
+    &[data-theme="grayLight"] {
+        color: $blue;
+        background-color: $blue-light;
+
+        &:hover {
+            background-color: $gold;
+            color: $white;
+        }
+    }
+
+    &[data-theme="blur"] {
+        background-color: $white20;
+        color: $white;
+        backdrop-filter: blur(50px);
+        border-radius: 0.8rem;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            transition: background-color $transition;
+            pointer-events: none;
+        }
+
+        &:hover {
+            &::after {
+                background-color: $gold;
+            }
+        }
+
+        &:focus-visible {
+            color: $blue;
+            border-color: $gold;
+            border-width: 1px;
+
+            &::after {
+                background-color: $rgba20;
+            }
+        }
+
+        .children {
+            z-index: 10;
+        }
+    }
+
+    &[data-theme="blur10"] {
+        background-color: $white20;
+        color: $white;
+        backdrop-filter: blur(10px);
+        border-radius: 0.8rem;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            transition: background-color $transition;
+            pointer-events: none;
+        }
+
+        &:hover {
+            &::after {
+                background-color: $gold;
+            }
+        }
+
+        &:focus-visible {
+            color: $blue;
+            border-color: $gold;
+            border-width: 1px;
+
+            &::after {
+                background-color: $rgba20;
+            }
+        }
+
+        .children {
+            z-index: 10;
+        }
+    }
+    &.button_download{
+
+        .children{
+            @include Manrope_semibold;
+            width: unset;
+        }
+    }
+    /* Цвета */
+    // &_bgblue {
+    // 	background-color: $blue;
+    // 	color: $white;
+
+    // 	&:hover {
+    // 		background-color: $gold;
+    // 	}
+
+    // 	&:focus-visible {
+    // 		background-color: $blue;
+    // 		color: $white;
+    // 		border-color: $gold;
+    // 		border-width: 1px;
+    // 	}
+    // }
+    // &_blur {
+    // 	background-color: transparent;
+    // 	color: $white;
+
+    // 	&::after {
+    // 		content: '';
+    // 		display: block;
+    // 		width: 100%;
+    // 		height: 100%;
+    // 		position: absolute;
+    // 		top: 0;
+    // 		left: 0;
+    // 		z-index: 0;
+    // 		transition: background-color $transition;
+    // 		pointer-events: none;
+    // 	}
+
+    // 	&:hover {
+    // 		&::after {
+    // 			background-color: $gold;
+    // 		}
+    // 	}
+
+    // 	&:focus-visible {
+    // 		color: $blue;
+    // 		border-color: $gold;
+    // 		border-width: 1px;
+
+    // 		&::after {
+    // 			background-color: $rgba20;
+    // 		}
+    // 	}
+
+    // 	.children {
+    // 		z-index: 10;
+    // 	}
+
+    // 	&_rgba_dark20 {
+    // 		&::after {
+    // 			background-color: $rgba_dark20;
+    // 			backdrop-filter: blur(25px);
+    // 		}
+    // 	}
+
+    // 	&_rgba20 {
+    // 		&::after {
+    // 			background-color: $rgba20;
+    // 			backdrop-filter: blur(5px);
+    // 		}
+    // 	}
+
+    // 	&_rgba10 {
+    // 		&::after {
+    // 			background-color: $rgba10;
+    // 			backdrop-filter: blur(5px);
+    // 		}
+    // 	}
+
+    // 	&_white{
+    // 		&::after {
+    // 			background-color: $white;
+    // 			backdrop-filter: blur(25px);
+    // 		}
+    // 	}
+    // }
+    // &_blue {
+    // 	color: $blue;
+
+    // 	&:hover {
+    // 		color: $white;
+    // 	}
+    // }
+
+    .children {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        line-height: 140%;
+        pointer-events: none;
+        width: 100%;
+
+        @include vp_575 {
+            white-space: normal;
+            text-align: center;
+        }
+    }
+
+    .cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+}
+
+.button_fullWidth {
+    width: 100%;
+    max-width: 100%;
+}

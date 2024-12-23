@@ -1,0 +1,69 @@
+@import '../../../styles/index.scss';
+
+.newsCard {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 4.4rem;
+    text-align: left;
+    border-radius: 1.2rem;
+    flex: 1;
+    min-width: 32rem;
+
+    @include vp_1024 {
+        padding: 2rem;
+    }
+}
+
+.newsCard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsCard__date {
+    font-size: 1.2rem;
+    line-height: 130%;
+    color: $blue;
+    opacity: 0.9;
+}
+
+.newsCard__type {
+    font-size: 1.6rem;
+    line-height: normal;
+    color: $blue;
+    padding: 0.6rem 1.2rem;
+    background-color: $dark_gray;
+    border-radius: 0.4rem;
+}
+
+.newsCard__title {
+    @include Manrope_semibold;
+    font-size: 3.6rem;
+    color: $blue;
+    opacity: 0.9;
+    line-height: 100%;
+
+    @include vp_1024 {
+        font-size: 2.4rem;
+        line-height: 110%;
+    }
+}
+
+.newsCard__text {
+    color: $blue;
+    font-size: 2rem;
+    line-height: 130%;
+
+    @include vp_1024 {
+        font-size: 1.4rem;
+        line-height: 140%;
+    }
+}
+
+.newsCard__btn {
+    @include vp_768 {
+        width: 100%;
+    }
+}

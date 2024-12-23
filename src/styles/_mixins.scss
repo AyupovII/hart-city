@@ -1,0 +1,80 @@
+@mixin HoverLink($default, $hover, $disabled) {
+	transition: color $transition;
+	
+	&,
+	&:active,
+	&:visited,
+	&:focus,
+	&:focus-visible {
+		color: $default !important;
+		border: none;
+	}
+
+	&:hover {
+		color: $hover !important;
+		cursor: pointer;
+	}
+
+	&._disabled {
+		color: $disabled !important;
+		pointer-events: none;
+		cursor: default;
+	}
+}
+
+@mixin BorderLink($default, $hover, $disabled) {
+	transition: color $transition;
+	
+	&,
+	&:active,
+	&:visited,
+	&:focus,
+	&:focus-visible {
+		color: $default !important;
+		border: none;
+		position: relative;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 1px;
+		background-color: $hover;
+		transition: width $transition;
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		pointer-events: none;
+	}
+
+	&:hover {
+		color: $hover !important;
+		cursor: pointer;
+
+		&::after {
+			width: 100%;
+		}
+	}
+
+	&._disabled {
+		color: $disabled !important;
+		pointer-events: none;
+		cursor: default;
+	}
+}
+
+@mixin RubberSize($property, $pcSize, $tbSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: 1920 - 375;
+	#{$property}: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+
+	@include vp_768 {
+		$addSize: $tbSize - $mobSize;
+		$maxWidth: 768 - 375;
+		#{$property}: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+	}
+	@include vp_475{
+		#{$property}: $mobSize + px;
+	}
+}

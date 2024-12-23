@@ -1,0 +1,59 @@
+@import '../../styles/vars.scss';
+
+.buttonArrow {
+  display: flex;
+  align-items: center;
+  border-radius: .4rem;
+  width: fit-content;
+  cursor: pointer;
+  transition: all $transition;
+  height: fit-content;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+
+  &:hover {
+    background-color: $gold_semi_light !important;
+  }
+}
+
+.buttonArrow.light {
+  background-color: $white;
+}
+
+.buttonArrow.dark {
+  background-color: $white24;
+}
+
+.buttonArrow__icon {
+
+  border-radius: .4rem;
+}
+
+.buttonArrow__icon.small {
+  width: 1.714rem;
+  height: 1.714rem;
+  margin: 1.143rem;
+}
+
+.buttonArrow__icon.medium {
+  margin: 1.6rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.buttonArrow__icon.left {
+  transform: rotate(180deg);
+}
+
+.buttonArrow__icon.right {
+  transform: rotate(0deg);
+}

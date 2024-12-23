@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "fio": "Абракадаброва Анастасия Константиновна",
+        "type": "IMPLEMENTED",
+        "status": "REJECTED",
+        "apartmentСomplex": "ЖК «Дом Гламура и Жадности»",
+        "apartment": "3-комн., 84,52м2",
+        "manager": {
+            "id": 1,
+            "name": "Авдеева Надежда Владимировна",
+            "phone": "8 (800) 555-35-35",
+            "email": "example@mail.ru"
+        },
+        "daysLeft": "14"
+    },
+    {
+        "id": 2,
+        "fio": "Бутурамбеков Махмедахмадиниджан Тимерланович",
+        "type": "NOT_IMPLEMENTED",
+        "status": "REJECTED",
+        "apartmentСomplex": "ЖК «Дом Гламура и Жадности»",
+        "apartment": "3-комн., 84,52м2",
+        "manager": {
+            "id": 1,
+            "name": "Авдеева Надежда Владимировна",
+            "phone": "8 (800) 555-35-35",
+            "email": "example@mail.ru"
+        },
+        "daysLeft": "14"
+    },
+    {
+        "id": 3,
+        "fio": "Абракадаброва Анастасия Константиновна",
+        "type": "REJECTED",
+        "status": "REJECTED",
+        "apartmentСomplex": "ЖК «Дом Гламура и Жадности»",
+        "apartment": "3-комн., 84,52м2",
+        "manager": {
+            "id": 1,
+            "name": "Авдеева Надежда Владимировна",
+            "phone": "8 (800) 555-35-35",
+            "email": "example@mail.ru"
+        },
+        "daysLeft": "14"
+    },
+    {
+        "id": 4,
+        "fio": "Абракадаброва Анастасия Константиновна",
+        "type": "NOT_IMPLEMENTED",
+        "status": "REJECTED",
+        "apartmentСomplex": "ЖК «Дом Гламура и Жадности»",
+        "apartment": "3-комн., 84,52м2",
+        "manager": {
+            "id": 1,
+            "name": "Авдеева Надежда Владимировна",
+            "phone": "8 (800) 555-35-35",
+            "email": "example@mail.ru"
+        },
+        "daysLeft": "14"
+    }
+]

@@ -1,0 +1,105 @@
+@import '../../styles/index.scss';
+
+.modal {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    // width: 0;
+    pointer-events: all;
+    // overflow: hidden;
+    position: absolute;
+    z-index: 1111;
+    top: 0;
+    padding-left: 5rem;
+    width: calc(100% + 2.5rem);
+    z-index: 100;
+    // background-color: $background;
+    // padding: 2.4rem;
+    // overflow-y: auto;
+    left: -5rem;
+    overflow: hidden;
+    // height: 100%;
+    margin: 2.4rem 2.4rem 2.4rem 0;
+
+    @include vp_1024 {
+        padding-top: 0;
+        padding-left: 2.5rem;
+        padding-right: 0;
+        margin: 0;
+        left: -2.5rem;
+    }
+
+
+}
+
+.modal--active {
+    top: 0;
+    right: 0;
+    // width: 100%;
+    z-index: 100;
+    background-color: $background;
+}
+
+.modal__content {
+    min-height: calc(100dvh - 4.8rem);
+    // overflow-y: auto;
+    border-radius: 1.2rem;
+    position: relative;
+    // right: -2rem;
+    top: 0;
+    background-color: $blue-light;
+    padding: 2rem;
+
+
+    @include vp_1024 {
+        // height: calc(100dvh - 4.8rem);
+        width: calc(100% - 2rem);
+        right: -2rem;
+    }
+}
+
+.modal__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    z-index: 1;
+}
+
+.modal__closeIcon {
+    cursor: pointer;
+    background-color: $gold;
+    position: absolute;
+    border-radius: 8px 0px 0px 8px;
+    height: 5rem;
+    width: 5rem;
+    top: 2.6rem;
+    left: 0;
+
+    @include vp_1024 {
+        width: 2rem;
+        height: 5rem;
+        left: 2.5rem;
+    }
+
+    &>img {
+        height: 2.4rem;
+        width: 2.4rem;
+        z-index: 1;
+        margin: 1.3rem 1rem 1.3rem 1.6rem;
+
+        @include vp_1024 {
+            margin: 1.5rem 0;
+
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+}
+
+.modal__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}

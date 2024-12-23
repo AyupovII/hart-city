@@ -1,0 +1,14 @@
+@import '../../styles/index.scss';
+.detailedApartment {}
+
+.detailedApartment__wrapper {
+    display: flex;
+    gap: 2rem;
+    // max-height: 61.1rem;
+    // flex-wrap: wrap;
+    height: 100%;
+    @include vp_1024 {
+        flex-direction: column;
+    }
+    
+}

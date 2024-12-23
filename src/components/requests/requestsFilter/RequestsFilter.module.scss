@@ -1,0 +1,13 @@
+.requestsFilter {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.requestsFilter__content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}

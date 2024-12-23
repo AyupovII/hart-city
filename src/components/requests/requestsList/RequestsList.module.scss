@@ -1,0 +1,13 @@
+@import '../../../styles/index.scss';
+
+.requestsList {
+    display: flex;
+    // grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @include vp_768 {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}

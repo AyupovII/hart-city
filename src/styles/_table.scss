@@ -1,0 +1,106 @@
+@import './breakpoints.scss';
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+
+    @include vp_1024 {
+        display: none;
+    }
+
+    &.--tablet {
+        display: none;
+
+        @include vp_1024 {
+            display: block;
+        }
+
+        background-color: transparent;
+
+        td:nth-child(even) {
+            background-color: $gray-table;
+        }
+
+        td:nth-child(odd) {
+            background-color: $white;
+        }
+
+        th {
+            color: $white;
+            background-color: $blue;
+            padding: .8rem 1.2rem 1rem 1.2rem;
+            min-width: 11.3rem;
+            border-bottom: 1px solid $white10;
+            position: sticky;
+            left: 0;
+        }
+
+        tr:first-child {
+            th {
+                border-radius: 1.2rem 1.2rem 0 0;
+            }
+
+        }
+
+        tr:last-child {
+            th {
+                border-radius: 0 0 1.2rem 1.2rem;
+            }
+
+        }
+
+    }
+}
+
+.table__head {
+    th {
+        color: $white;
+        background-color: $blue;
+        padding: 1.6rem;
+        text-align: left;
+        border-right: 1px solid $white10;
+    }
+
+    th:first-child {
+        border-radius: 1.2rem 0 0 0;
+
+    }
+
+    th:last-child {
+        border-radius: 0 1.2rem 0 0;
+
+    }
+
+}
+
+.table__body {
+    overflow-x: auto;
+    background-color: $white;
+
+    tr {
+        background-color: $white;
+        text-align: left;
+    }
+
+    td {
+        font-size: 1.4rem;
+        line-height: 130%;
+        padding: 1.6rem;
+        min-height: 9.6rem;
+        color: $gray_dark;
+
+        @include vp_1024 {
+            padding: .8rem 1.2rem;
+            min-height: 6.4rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    tr:nth-child(even) {
+        background-color: $dark_gray;
+
+        @include vp_1024 {
+            background-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import '../../../styles/index.scss';
+
+
+.auth {
+  display: grid;
+  // background-color: $blue;
+  // max-width: 1920px;
+  // flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  padding: 7rem;
+
+  @include vp_1800 {
+    padding: 5rem;
+  }
+
+  @include vp_1280 {
+    padding: 2.4rem;
+  }
+
+  @include vp_1024 {
+    padding: 0;
+  }
+
+}
+
+
+
+
+.auth__component {
+  background-color: $blue_light;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  // @include RubberSize(gap, 176, 112, 48);
+
+  // @include RubberSize(width, 280, 240, 200);
+  @include vp_1024 {
+    border-radius: unset;
+    width: 100vw;
+    height: 100vh
+  }
+}
+
+.auth__logo {
+  @include RubberSize(width, 280, 240, 200);
+  @include RubberSize(height, 62, 53, 44);
+  @include RubberSize(margin-top, 50, 40, 40);
+
+}

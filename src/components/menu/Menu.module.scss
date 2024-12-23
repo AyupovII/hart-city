@@ -1,0 +1,283 @@
+@import '../../styles/index.scss';
+
+.menu {
+    background-color: $blue;
+    max-width: 11rem;
+    min-width: 11rem;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: max-width .5s ease-in-out, min-width .5s ease-in-out;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+
+    @include vp_1024 {
+        display: none;
+    }
+
+    &--open {
+        max-width: 32rem;
+        min-width: 32rem;
+
+        & .menu__profile-info {
+            opacity: 1;
+            // white-space: initial;
+            height: 100%;
+            // display: flex;
+
+            & * {
+                opacity: 1;
+            }
+        }
+
+        & .menu__menu-name-icon {
+            width: auto;
+            opacity: 1;
+            display: block;
+        }
+
+        & .menu__header {
+            padding: 3.5rem 3.5rem 0 3.5rem;
+            gap: 4.8rem;
+        }
+
+        & .menu__profile {
+            width: auto;
+            // justify-content: center;
+            display: flex;
+
+        }
+
+        .menu__logout-text {
+            display: block;
+            opacity: 1;
+        }
+
+        & .menu__menu-control-icon {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.menu__profile-info,
+.menu__menu-name-icon,
+.menu__logout-text {
+    transition-delay: 0.3s;
+    // width: auto;
+    display: none;
+    opacity: 0;
+}
+
+.menu__container {
+    padding: 0 3.5rem 3.5rem 3.5rem;
+    height: 100%;
+
+}
+
+.menu__header-container {
+    padding: 0 3.5rem 3.5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+}
+
+
+.menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5rem 1.75rem 0 1.75rem;
+    gap: unset;
+    transition: padding 1s ease-in-out;
+}
+
+.menu__main-logo {
+    display: flex;
+    gap: 1.307rem;
+    align-items: center;
+}
+
+.menu__menu-icon {
+    width: 3.519rem;
+    height: 3.847rem;
+    object-fit: contain;
+    color: $white;
+}
+
+.menu__menu-name-icon {
+    display: none;
+
+    width: 12.674rem;
+    height: 2.233rem;
+    object-fit: contain;
+    transition: all 2s ease-in-out;
+    opacity: 0;
+}
+
+.menu__menu-control-icon {
+    transform: rotate(180deg);
+    height: 2.4rem;
+    width: 2.4rem;
+    object-fit: contain;
+    cursor: pointer;
+
+}
+
+.menu__profile {
+    // width: 4rem;
+    cursor: pointer;
+    display: flex;
+    gap: .8rem;
+    min-height: 5.3rem;
+    // align-items: center;
+    padding-bottom: 4.8rem;
+    padding-top: 4.8rem;
+    border-bottom: 1px solid $white30;
+    // justify-content: center;
+    // justify-content: space-between;
+}
+
+.menu__profile-info {
+    // display: none;
+    white-space: nowrap;
+    height: 40px;
+    // width: 198px;
+    // min-width: 198px;
+    transition: white-space 1s ease-in-out;
+    overflow: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    // transition: opacity 1s ease-in-out;
+
+    // & * {
+    //     transition: opacity 2s ease-in-out;
+    // }
+}
+
+.menu__profile-photo {
+    height: 4rem;
+    width: 4rem;
+    object-fit: cover;
+    border-radius: .4rem
+}
+
+.menu__profile-name-text {
+    transition: all 0.1s ease-in-out;
+    text-align: left;
+    // word-break: normal;
+    @include Manrope_bold;
+    color: $white;
+    font-size: 2rem;
+    opacity: 1;
+    // max-height: 48px;
+}
+
+.menu__profile-name-company {
+    @include Manrope_regular;
+    color: $white50;
+    font-size: 1.6rem;
+    opacity: 1;
+
+}
+
+
+
+///////////////////mobile////////////////
+.menu_mobile {
+    display: none;
+
+    @include vp_1024 {
+        display: flex;
+    }
+
+    flex-direction: column;
+}
+
+.menu_mobile--open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    background-color: $blue;
+}
+
+.menu_mobile__container {
+    padding-left: 2rem;
+    height: 100%;
+    overflow: hidden;
+    background-color: $gray_bg;
+    border-top: 1px solid $gray_border;
+    display: none;
+
+}
+
+.menu_mobile__content {
+    background-color: $blue;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    width: 100%;
+}
+
+.menu_mobile__header {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu_mobile__profile {
+    cursor: pointer;
+    display: flex;
+    // flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.menu_mobile__profile-photo {
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: .4rem
+}
+
+.menu_mobile__profile-info {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.menu_mobile__profile-name-text {
+    color: $white;
+    font-size: 1.2rem;
+}
+
+.menu_mobile__profile-name-company {
+    color: $white50;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.menu_mobile__menu-icon {
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+        color: $gold;
+    }
+}
+
+.menu_mobile__container--open {
+    display: flex;
+}

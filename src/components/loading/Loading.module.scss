@@ -1,0 +1,25 @@
+@import '../../styles/index.scss';
+
+.loading {
+    position: relative;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loading__loader {
+    color: white;
+    position: absolute;
+    height: 200px;
+    width: auto;
+}
+
+.loading__preloader {
+    color: $gold;
+    position: absolute;
+    height: 200px;
+    width: auto;
+
+}

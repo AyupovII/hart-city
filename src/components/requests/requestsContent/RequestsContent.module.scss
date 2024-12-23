@@ -1,0 +1,18 @@
+@import '../../../styles/index.scss';
+
+.requests {
+    display: flex;
+    flex-direction: column;
+}
+.requests__title{
+    text-align: left;
+}
+
+.requests__container {
+    display: flex;
+    flex-direction: column;
+    @include RubberSize(gap, 52, 32, 24);
+}
+.requests__button{
+    place-self: center;
+}

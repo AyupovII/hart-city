@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 120%;
+    // scroll-behavior: smooth;
+    // scrollbar-width: 8px;
+    outline: none;
+    scroll-margin-top: 50px;
+    // letter-spacing: -.9px;
+
+    @include vp_768 {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 6px;
+        background-color: $blue_light;
+
+        &:hover {
+            cursor: grab;
+        }
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $blue;
+        border-radius: 4px;
+    }
+}
+
+.wrapper,
+main>div {
+    display: flex;
+    flex-direction: column;
+
+    @include vp_768 {
+        gap: 1.6rem;
+    }
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 100%;
+
+    @include vp_768 {
+        line-height: 110%;
+    }
+}
+
+h1 {
+    @include Manrope_semibold;
+    @include RubberSize(font-size, 60, 32, 32);
+}
+
+h2 {
+    @include Manrope_semibold;
+    @include RubberSize(font-size, 42, 24, 24);
+}
+
+section {
+
+    &>h1,
+    &>h2,
+    &>h3 {
+        text-align: left;
+        margin-bottom: 5rem;
+
+        @include vp_1024 {
+            margin-bottom: 2.4rem;
+        }
+    }
+}
+
+.container {
+    padding: 2.4rem;
+    width: 100%;
+
+    @include vp_1024 {
+        padding: 2rem;
+    }
+}
+
+.card-header {
+    @include Manrope_semibold;
+    @include RubberSize(font-size, 36, 24, 24);
+    line-height: 100%;
+}
+
+.text-medium {
+    @include Manrope_semibold;
+    @include RubberSize(font-size, 24, 16, 16);
+    line-height: 120%;
+}
+
+.card-text {
+    @include Manrope_regular;
+    @include RubberSize(font-size, 20, 14, 14);
+    line-height: 120%;
+}
+
+.card-regular {
+    @include Manrope_regular;
+    @include RubberSize(font-size, 16, 14, 14);
+    line-height: 120%;
+}
+
+.card-description {
+    @include Manrope_regular;
+    font-size: 12px;
+    line-height: 120%;
+}
+
+.link_blue {
+    color: $blue;
+}
+
+.link_white {
+    color: $white;
+}
+
+.link_blue:hover,
+.link_white:hover {
+    color: $gold;
+}
+
+.swiper-pagination-bullet {
+    margin: 0 .7rem !important;
+    padding: 0;
+    width: 32px;
+    height: 4px;
+    background: transparent;
+    border-radius: 0;
+    opacity: 1;
+
+    transition: width $transition;
+
+    &>p {
+        border-radius: 4px;
+        background: $rgba20;
+        height: 4px;
+    }
+
+    &-active {
+        width: 60px;
+
+        &>p {
+            // background: $blue;
+            background: $white;
+        }
+    }
+}
+
+////////////////////
+.mainSlider__pagination.swiper-pagination {
+    position: relative;
+    top: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    width: unset !important;
+}
+
+.apartmentSliders {
+
+    & .swiper-button-prev,
+    & .swiper-button-next {
+        background-color: $blue-light;
+
+        @include vp_1280 {
+            display: none;
+        }
+    }
+}
+
+////////////////////
+
+._lock {
+    overflow: hidden;
+    height: 100dvh;
+}
+
+section + section{
+    margin-top: 10rem;
+}
+.MuiSlider-rail {
+    background-color: $blue_semi_light !important;
+    opacity: 1 !important;
+    height: 2px !important;
+}
+
+.MuiSlider-track {
+    background-color: $blue !important;
+    color: $blue !important;
+    height: 2px !important;
+}
+
+.MuiSlider-thumb {
+    background-color: $blue !important;
+    height: 12px !important;
+    width: 28px !important;
+    border-radius: 18px !important;
+    box-shadow: none !important;
+    color: $blue !important;
+
+    &:hover {
+        background-color: $gold !important;
+    }
+}
+
+.MuiSlider-root {
+    width: calc(100% - 9rem) !important;
+    align-self: center !important;
+}
+
+.apartmentSliders__thumbs {
+    & .swiper-slide-thumb-active {
+        background-color: $blue-light;
+        border: 1px solid $blue-light;
+    }
+
+    & .swiper-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+
+        &>div {
+            // width: 100% !important;
+            flex: 1;
+            min-width: 12.8rem;
+
+            @include vp_575 {
+                min-width: 11.7rem;
+            }
+        }
+
+        @include vp_1280 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include vp_1024 {
+            gap: 0.4rem;
+
+        }
+
+
+    }
+}

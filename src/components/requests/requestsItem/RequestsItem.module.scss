@@ -1,0 +1,111 @@
+@import '../../../styles/index.scss';
+
+.requestsItem {
+    background-color: $white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    border-radius: 1.2rem;
+    flex-grow: 1;
+    @include vp_1024 {
+        gap: 2.4rem;
+    }
+}
+
+.requestsItem__status {
+    display: flex;
+    justify-content: space-between;
+}
+
+.requestsItem__status-type {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.requestsItem__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+
+    @include vp_1024 {
+        gap: 2.4rem;
+    }
+}
+
+.requestsItem__status-text {
+    font-size: 1.6rem;
+    color: $blue;
+
+    @include vp_1024 {
+        font-size: 1.4rem;
+    }
+}
+
+.requestsItem__status-date {
+    color: $blue_medium;
+    font-size: 1.6rem;
+
+    @include vp_1024 {
+        font-size: 1.4rem;
+    }
+}
+
+.requestsItem__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    align-items: flex-start;
+
+    @include vp_1024 {
+        font-size: .8rem;
+    }
+}
+
+.requestsItem__name {
+    @include Manrope_semibold;
+    font-size: 2.8rem;
+    color: $blue;
+
+    @include vp_1024 {
+        font-size: 2.4rem;
+    }
+}
+
+.requestsItem__description {
+    color: $blue;
+    @include Manrope_medium;
+    font-size: 2.4rem;
+
+    @include vp_1024 {
+        @include Manrope_regular;
+        font-size: 1.2rem;
+    }
+}
+
+.requestsItem__fio {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.4rem;
+    border-top: 1px solid $blue50;
+}
+
+.requestsItem__fio-value {
+    @include Manrope_regular;
+    font-size: 1.4rem;
+    color: $blue_medium;
+
+    @include vp_1024 {
+        font-size: 1.6rem;
+        color: $blue;
+    }
+
+}
+
+.requestsItem__fio-text {
+    @include Manrope_regular;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $blue;
+}

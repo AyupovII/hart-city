@@ -1,0 +1,9 @@
+@import '../../../styles/index.scss';
+.objectsList{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    @include vp_768 {
+        grid-template-columns: 1fr
+    }
+}

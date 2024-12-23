@@ -1,0 +1,82 @@
+@import '../../styles/index.scss';
+@import '../../styles/breakpoints.scss';
+
+.inputField {
+    position: relative;
+
+    &>input {
+        @include Manrope_regular;
+        // @include RubberSize(font-size, 16, 14, 14);
+        font-size: 1.6rem;
+        padding: 1.2rem 1.6rem;
+        min-height: 5rem;
+        border: none;
+        background-color: $white;
+        border-radius: 4px;
+        color: $blue;
+        outline: none;
+        transition: color $transition, box-shadow $transition;
+        width: 100%;
+        color: $blue;
+        @include vp_1920 {
+            height: 5.6rem;
+        }
+
+        @include vp_991 {
+            height: 5.2rem;
+            line-height: 40%;
+        }
+
+        // @include min_vp_575 {
+        //     @include RubberSize(font-size, 16, 14, 10);
+        // }
+
+        &:focus {}
+
+        &::placeholder {
+            color: $blue_medium;
+            transition: color $transition;
+        }
+
+
+        // .has-success & {
+        //     &:not(:focus) {
+        //         border-color: $gold;
+        //     }
+        // }
+
+        &[disabled] {
+            pointer-events: none;
+        }
+
+        &.inputField__password {
+            padding-right: 45px;
+        }
+    }
+
+    &.inputField__error {
+        &>input {
+
+            &:not(:focus) {
+                box-shadow: 0px 0px 8.1px 0px rgba(255, 0, 0, 0.30) inset;
+
+                &,
+                &::placeholder {
+                    color: $error;
+                }
+            }
+        }
+    }
+}
+.inputField__input{
+    width: auto;
+}
+
+.inputField__icon {
+    cursor: pointer;
+    height: 1.8rem;
+    width: 1.8rem;
+    position: absolute;
+    right: 1.6rem;
+    top: calc(50% - 9px);
+}

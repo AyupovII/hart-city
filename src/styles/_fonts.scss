@@ -1,0 +1,66 @@
+/* Manrope */
+@font-face {
+	font-family: manrope_extrabold;
+	src: url("../fonts/manrope_extrabold.woff2") format("woff2");
+	font-weight: 900;
+	font-style: normal;
+}
+@mixin Manrope_extrabold {
+	font-family: manrope_extrabold, sans-serif;
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: manrope_bold;
+	src: url("../fonts/manrope_bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+@mixin Manrope_bold {
+	font-family: manrope_bold, sans-serif;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: manrope_semibold;
+	src: url("../fonts/manrope_semibold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+}
+@mixin Manrope_semibold {
+	font-family: manrope_semibold, sans-serif;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: manrope_medium;
+	src: url("../fonts/manrope_medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+@mixin Manrope_medium {
+	font-family: manrope_medium, sans-serif;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: manrope_regular;
+	src: url("../fonts/manrope_regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin Manrope_regular {
+	font-family: manrope_regular, sans-serif;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: manrope_light;
+	src: url("../fonts/manrope_light.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+@mixin Manrope_light {
+	font-family: manrope_light, sans-serif;
+	font-weight: 300;
+}

@@ -1,0 +1,19 @@
+@import '../../../styles/index.scss';
+
+.objects {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    @include vp_1024 {
+        gap: 2.4rem;
+    }
+}
+
+.objects__container {
+    display: flex;
+    flex-direction: column;
+    @include RubberSize(gap, 52, 32, 24);
+}
+.objects__button{
+    place-self: center;
+}

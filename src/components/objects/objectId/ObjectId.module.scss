@@ -1,0 +1,67 @@
+@import './../../../styles/index.scss';
+
+.objectId {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include vp_1024 {
+        gap: 2.4rem;
+    }
+}
+
+.objectId__title {
+    text-align: left;
+    margin-bottom: 3.2rem;
+
+    @include vp_1024 {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.objectId__control {
+    margin-top: 5.2rem;
+    height: 4.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_active {
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include vp_1440 {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @include vp_1024 {
+        margin-top: 2.4rem;
+    }
+
+    @include vp_768 {
+        flex-direction: column;
+        height: unset;
+        gap: 2.4rem;
+    }
+
+
+}
+
+.objectId__text {
+    text-align: left;
+
+    @include vp_1440 {
+        display: none;
+    }
+}
+
+.objectId__button {
+    justify-self: center;
+}
+
+.objectId__pagination {
+    justify-self: end;
+}

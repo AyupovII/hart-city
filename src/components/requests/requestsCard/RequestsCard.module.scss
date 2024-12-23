@@ -1,0 +1,159 @@
+@import '../../../styles/index.scss';
+
+.requestsCard {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  height: 100%;
+
+  @include vp_1024 {
+    gap: 4.8rem;
+  }
+}
+
+.requestsCard__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.requestsCard__title {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  @include vp_1024 {
+    gap: 1.2rem;
+  }
+}
+
+.requestsCard__card {
+  flex: 1;
+  padding: 2.4rem;
+  background-color: $white;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  @include vp_1024 {
+    gap: 1.6rem;
+    padding: 2rem;
+  }
+}
+
+.requestsCard__role {
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: $blue_medium;
+}
+
+.requestsCard__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.requestsCard__line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $blue_semi_light;
+}
+
+.requestsCard__name {
+  color: $blue;
+  @include Manrope_semibold;
+  font-size: 2.4rem;
+  line-height: 120%;
+
+  @include vp_1024 {
+    line-height: 110%;
+  }
+}
+
+.requestsCard__info {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.requestsCard__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.requestsCard__body {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.requestsCard__complex {
+  @include Manrope_semibold;
+  font-size: 2rem;
+  line-height: 120%;
+  color: $black-v2;
+}
+
+.requestsCard__apartment {
+  color: $blue_medium;
+  @include Manrope_semibold;
+  font-size: 2rem;
+  line-height: 120%;
+}
+
+.requestsCard__list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  @include vp_1024 {
+    flex-direction: column;
+  }
+}
+
+.requestsCard__contacts {
+  display: flex;
+  gap: 4.8rem;
+
+  @include vp_1024 {
+    gap: 2.4rem;
+    flex-direction: column;
+  }
+}
+
+.requestsCard__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.requestsCard__label {
+  color: $blue_medium;
+  font-size: 1.6rem;
+}
+
+.requestsCard__value {
+  color: $blue;
+  @include Manrope_semibold;
+  font-size: 2rem;
+}
+
+.requestsCard__button-tablet {
+  display: none;
+
+  @include vp_1024 {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.requestsCard__button {
+  display: flex;
+
+  @include vp_1024 {
+    display: none;
+  }
+
+}

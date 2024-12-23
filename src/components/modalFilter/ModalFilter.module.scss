@@ -1,0 +1,30 @@
+@import '../../styles/index.scss';
+
+.modalFilter {
+    transition: all 0.5s ease-in-out;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    height: 100dvh;
+
+}
+
+.modalFilter--active {
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: $background;
+}
+
+.modalFilter__content {
+    border-radius:  1.2rem 0 0 1.2rem;
+    position: relative;
+    right: -2rem;
+    top: 4.8rem;
+    background-color: $blue-light;
+    padding: 2rem;
+    height: calc(100dvh - 4.8rem);
+    width: calc(100% - 2rem);
+
+}

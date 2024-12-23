@@ -1,0 +1,46 @@
+@import '../../styles/index.scss';
+
+.filter__desktop {
+    display: block;
+
+    @include vp_1024 {
+        display: none;
+    }
+}
+
+.filter__tablet {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    gap: 1.2rem;
+
+    @include vp_1024 {
+        display: flex;
+    }
+}
+
+.filter {
+    // display: none;
+}
+.filter__btn{
+    min-width: 100%;
+}
+
+
+.filter__btn-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.filter__btn-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter__btn-icon {
+    height: 1.8rem;
+    width: 1.8rem;
+}

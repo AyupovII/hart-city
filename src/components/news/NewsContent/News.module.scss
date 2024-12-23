@@ -1,0 +1,27 @@
+@import '../../../styles/index.scss';
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 5.2rem;
+    align-items: center;
+
+    @include vp_1024 {
+        gap: 2.4rem;
+    }
+}
+
+.news__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include vp_1440 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include vp_1024 {
+        gap: 1.2rem;
+    }
+}

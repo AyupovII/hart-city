@@ -1,0 +1,71 @@
+@import '../../styles/index.scss';
+.myRequests__wrapper{
+    height: 100%;
+}
+.myRequests__title {
+    text-align: left;
+    margin-bottom: 3.2rem;
+
+    @include vp_1024 {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.myRequests {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    @include vp_1024 {
+        gap: 4.8rem;
+    }
+}
+
+.myRequests__content {
+    position: relative;
+    overflow-x: auto;
+    min-height: 23rem;
+    background-color: $white;
+    @include vp_1024 {
+        min-height: 42.1remrem;
+    }
+}
+
+.myRequests__control {
+    margin-top: auto;
+    height: 4.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include vp_1440 {
+        display: flex;
+    }
+
+    @include vp_1024 {
+
+    }
+
+    @include vp_768 {
+        margin-top: auto;
+        gap: 1rem;
+        flex-direction: column;
+        height: unset;
+        align-items: flex-start;
+    }
+}
+
+.myRequests__text {
+    text-align: left;
+    display: block;
+    color: $gray-black;
+
+    @include vp_1024 {
+        padding-top: .7rem;
+        padding-bottom: .7rem;
+    }
+
+}
+
+.myRequests__pagination {
+    justify-self: end;
+}

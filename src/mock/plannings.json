@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "ЖК Первый",
+        "columnRoom": 1,
+        "area": 40,
+        "floor": 5,
+        "price": 3152500
+    },
+    {
+        "id": 2,
+        "title": "ЖК Первый",
+        "columnRoom": 1,
+        "area": 40,
+        "floor": 5,
+        "price": 3152500
+    },
+    {
+        "id": 3,
+        "title": "ЖК Первый",
+        "columnRoom": 1,
+        "area": 40,
+        "floor": 5,
+        "price": 3152500
+    },
+    {
+        "id": 4,
+        "title": "ЖК Первый",
+        "columnRoom": 1,
+        "area": 40,
+        "floor": 5,
+        "price": 3152500
+    },
+    {
+        "id": 5,
+        "title": "ЖК Первый",
+        "columnRoom": 1,
+        "area": 40,
+        "floor": 5,
+        "price": 3152500
+    }
+]

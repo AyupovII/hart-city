@@ -1,0 +1,31 @@
+@import "../../styles/index.scss";
+
+.pagination {
+    display: flex;
+    gap: 0.8rem;
+    height: max-content;
+}
+
+.pagination__item {
+    @include Manrope_bold;
+    padding: 1rem;
+    background-color: $white;
+    color: $blue;
+    min-width: 2rem;
+    min-height: 1.8rem;
+    text-align: center;
+    line-height: 120%;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+    border: none;
+    overflow: hidden;
+    transition: all .2s ease-out;
+    height: 4rem;
+    width: 4rem;
+}
+
+.pagination__item_active {
+    background-color: $blue;
+    color: $white;
+}

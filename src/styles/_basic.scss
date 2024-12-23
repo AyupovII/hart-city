@@ -1,0 +1,76 @@
+@import "vars";
+@import "fonts";
+html,
+body {
+  @include Manrope_regular;
+  height: 100vh;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  background-color: $blue;
+  color: $blue;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  touch-action: pan-x pan-y;
+
+  &._lock {
+    overflow: hidden;
+
+    // @include mobile {
+    // 	width: 100%;
+    // 	position: fixed;
+    // }
+  }
+
+  @supports (-moz-appearance: none) {
+    overflow-y: auto;
+  }
+}
+
+main {
+  flex: 1 1;
+
+  &>div {}
+}
+
+a {
+  text-decoration: none;
+
+  // @include vp_768 {
+  //   user-select: none;
+  // }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+
+  &:focus-visible {
+    border: none;
+  }
+
+  :disabled {
+    cursor: default;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.grecaptcha-badge {
+  display: none;
+}
+
+
+div[id^="wait_comp_"] {
+  display: none !important;
+}
+

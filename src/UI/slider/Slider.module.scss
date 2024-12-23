@@ -1,0 +1,148 @@
+@import '../../styles/index.scss';
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  // width: fit-content;
+  width: min-content;
+  flex-grow: 1;
+  min-width: 37.8rem;
+  @include vp_768 {
+    flex-grow: unset;
+    min-width: 32.8rem;
+  }
+
+  &>label {
+    text-align: left;
+    // @include RubberSize(font-size, 16, 12, 12);
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: $blue_medium;
+
+    @include vp_991 {
+      line-height: 140%;
+    }
+
+    // @include min_vp_575 {
+    //   @include RubberSize(font-size, 16, 12, 4);
+    // }
+  }
+}
+
+.slider__inputs {
+  background-color: $white;
+  border-radius: 4px;
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  position: relative;
+
+  // @include vp_1920 {
+  //   height: 5.6rem;
+  // }
+
+  // @include vp_991 {
+  //   height: 5.2rem;
+  //   line-height: 40%;
+  // }
+}
+
+.slider__inputs-first {
+  position: relative;
+
+  &>input {
+    border-radius: 4px 0 0 4px;
+  }
+
+}
+
+.slider__inputs-second {
+  // text-align: end;
+}
+
+.slider__input-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0.2rem 0;
+
+
+  @include min_vp_991 {
+    // width: 141px;
+    // width: 7.344vw;
+  }
+
+  &:last-child {
+    @include min_vp_991 {
+      margin-left: auto;
+    }
+
+    &>input {
+      // text-align: right;
+    }
+
+  }
+
+  &>span {
+    @include RubberSize(font-size, 16, 14, 14);
+    line-height: 120%;
+    color: $blue_medium;
+
+    @include vp_768 {
+      line-height: 140%;
+    }
+
+    @include min_vp_575 {
+      @include RubberSize(font-size, 16, 14, 10);
+    }
+  }
+
+  &>input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+
+    @include min_vp_991 {
+      @include RubberSize(font-size, 16, 10, 3);
+    }
+
+    @include min_vp_575 {
+      @include RubberSize(font-size, 16, 14, 10);
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.slider__separator {
+  display: block;
+  width: 1px;
+  height: 26px;
+  background-color: $blue_semi_light;
+}
+
+.slider__mui {
+  position: relative;
+  width: 100%;
+  margin-top: -15px;
+
+}
+
+.slider__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+}

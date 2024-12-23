@@ -1,0 +1,251 @@
+@import '../../styles/index.scss';
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    text-align: left;
+
+    @include vp_1024 {
+        gap: 4.8rem;
+    }
+}
+
+.profile__title {
+    color: $black_v2;
+    @include Manrope_semibold;
+    font-size: 4.2rem;
+    line-height: 100%;
+
+    @include vp_1024 {
+        font-size: 3.2rem;
+    }
+}
+
+.profile__content {
+    display: flex;
+    gap: 3.2rem;
+    align-items: flex-start;
+
+    @include vp_1024 {
+        gap: 4.8rem;
+        flex-direction: column;
+    }
+}
+
+.profile__edit-icon-wrapper {
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    overflow: hidden;
+}
+
+.profile__photo {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+
+        .profile__plus-icon-wrapper {
+            opacity: 1;
+        }
+
+        .profile__plus-icon-wrapper-empty {
+            background-color: $gold50
+        }
+
+        .profile__edit {
+            // border-bottom: 1px dotted $white;
+            @include BorderLink($blue, $gold, $blue);
+        }
+
+        .profile__edit-text {
+            color: $gold;
+        }
+
+        .profile__edit-icon {
+            color: $gold;
+        }
+        .profile__plus-icon{
+            color: $white;
+        }
+        .profile__plus-text{
+            color: $white;
+        }
+    }
+}
+
+.profile__input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+.profile__plus-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.profile__plus-text {
+    color: $white;
+    font-size: 1.2rem;
+    line-height: 130%;
+    text-align: center;
+}
+
+.profile__plus-icon-wrapper {
+    background-color: $gold50;
+    gap: 0.4rem;
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 0.4rem;
+    transition: opacity $transition;
+
+}
+
+.profile__plus-icon-wrapper-empty {
+    // background-color: $gold50;
+    border: 1px solid $blue_medium;
+    border-radius: 0.4rem;
+    // overflow: hidden;
+    gap: 0.4rem;
+    opacity: 1;
+    display: flex;
+    // position: absolute;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 0.4rem;
+    transition: opacity $transition;
+    &:hover {
+        border-color: $gold;
+    }
+    & .profile__plus-text {
+        color: $black;
+        opacity: 0.5;
+    }
+
+    & .profile__plus-icon {
+        color: $black;
+        opacity: 0.5;
+    }
+}
+
+.profile__profile-name {
+    flex-direction: column;
+    gap: 0.2rem;
+    display: none;
+
+    @include vp_1024 {
+        display: flex;
+    }
+}
+
+.profile__name {
+    @include Manrope_bold;
+    font-size: 2rem;
+    line-height: normal;
+    color: $black;
+}
+
+.profile__edit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+
+}
+
+.profile__edit-text {
+    color: $black;
+    opacity: 0.5;
+    font-size: 1.6rem;
+    line-height: normal;
+}
+
+.profile__edit-icon {
+    color: $black;
+    opacity: 0.5;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.profile__image {
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+}
+
+.profile__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include vp_1024 {
+        gap: 2.4rem;
+        width: 100%;
+    }
+}
+
+.profile__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+
+.profile__label {
+    @include Manrope_semibold;
+    font-size: 2.4rem;
+    line-height: 120%;
+    color: $blue;
+
+    @include vp_1024 {
+        line-height: 110%;
+    }
+}
+
+.profile__inputs {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    // grid-template-columns: repeat(auto-fit, 1fr);
+    @include vp_1024 {
+        gap: 1.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.profile__input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 61.2rem;
+    flex-grow: 1;
+
+    @include vp_1440 {
+        width: 40.2rem;
+    }
+
+    @include vp_1024 {
+        width: 100%;
+    }
+}

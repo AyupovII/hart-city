@@ -1,0 +1,19 @@
+@import '../../styles/index.scss';
+
+.clearFilter {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.clearFilter__text {
+  @include Manrope_regular;
+  font-size: 1.8rem;
+  color: $blue;
+  white-space: nowrap;
+}
+
+.clearFilter__icon {
+  height: 1.9rem;
+  width: 1.9rem;
+}

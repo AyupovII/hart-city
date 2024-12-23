@@ -1,0 +1,23 @@
+@import '../../styles/index.scss';
+
+.map {
+    overflow: hidden;
+    border-radius: 1.2rem;
+    margin-top: 2.4rem;
+    margin-bottom: 5rem;
+    width: inherit;
+
+    @include vp_1024 {
+        margin: 1.2rem 0;
+    }
+
+    &>div {
+        height: 55rem !important;
+
+        @include vp_768 {
+            height: 30rem !important;
+        }
+    }
+
+
+}

@@ -1,0 +1,13 @@
+#yandex-map {
+	width: inherit;
+	height: 100%;
+	.ymaps-2-1-79-ground-pane canvas,
+	.ymaps-2-1-79-inner-panes {
+		filter: saturate(50%) brightness(99%) grayscale(90%) !important;
+	}
+
+	.ymaps-2-1-79-copyright,
+	.ymaps-2-1-79-map-copyrights-promo {
+		display: none;
+	}
+}

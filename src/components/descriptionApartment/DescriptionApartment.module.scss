@@ -1,0 +1,178 @@
+@import '../../styles/index.scss';
+
+.descriptionApartment {
+    border-radius: 1.2rem;
+    background-color: $white;
+    // min-width: 32rem;
+    // width: 55.8rem;
+    flex: 1;
+}
+
+.descriptionApartment__header {
+    border-radius: 12px 12px 0px 0px;
+    background-color: $blue;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 3.2rem;
+    text-align: left;
+
+    @include vp_1024 {
+        padding: 2rem;
+    }
+}
+.descriptionApartment__title{
+    display: flex;
+    justify-content: space-between
+}
+
+.descriptionApartment__text {
+    @include Manrope_medium;
+    font-size: 2.4rem;
+    color: $white;
+}
+
+.descriptionApartment__date {
+    @include Manrope_regular;
+    width: fit-content;
+    font-size: 1.6rem;
+    color: $white;
+    padding: .8rem 1.6rem;
+    background-color: $blue-light;
+    border-radius: 4px;
+    background: $white20;
+    backdrop-filter: blur(5px);
+}
+
+.descriptionApartment__price {
+    color: $white;
+    @include Manrope_bold;
+    font-size: 2.4rem;
+    line-height: 110%;
+}
+
+.descriptionApartment__content {
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    @include vp_1024 {
+        padding: 2rem;
+        gap: 1.6rem;
+    }
+}
+
+.descriptionApartment__credit-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.45rem;
+}
+
+.descriptionApartment__credit {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    flex-wrap: wrap;
+
+    & p {
+        @include Manrope_medium;
+        font-size: 1.6rem;
+        color: $black_v2;
+        opacity: .5;
+    }
+
+    & span {
+        color: $black_v2;
+        font-size: 2rem;
+        @include Manrope_bold;
+        text-align: start;
+
+        @include vp_575 {
+            width: 100%;
+        }
+    }
+}
+
+.descriptionApartment__info {
+    display: flex;
+    column-gap: 2.4rem;
+    flex-wrap: wrap;
+    row-gap: 0.8rem;
+
+    & p {
+        @include Manrope_semibold;
+        font-size: 1.6rem;
+        color: $black_v2;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+}
+
+.descriptionApartment__character {
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptionApartment__characterContent {
+    display: flex;
+    justify-content: space-between;
+
+    & p {
+        @include Manrope_regular;
+        font-size: 1.6rem;
+        color: $blue_medium;
+        line-height: 120%;
+
+        @include vp_1280 {
+            font-size: 1.2rem;
+        }
+
+        @include vp_1024 {
+            font-size: 1.6rem;
+        }
+
+        @include vp_768 {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.descriptionApartment__buttons {
+    display: flex;
+    gap: 1.2rem;
+    // flex-wrap: wrap;
+
+    @include vp_1024 {
+        flex-direction: column;
+    }
+}
+
+.descriptionApartment__download {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+    @include vp_1024 {
+        display: none;
+    }
+}
+.descriptionApartment__download--tablet{
+    display: none;
+    @include vp_1024 {
+        display: flex;
+    }
+}
+
+.descriptionApartment__downloadIcon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: $white;
+}
+
+.descriptionApartment__downloadText {
+    color: $white;
+    @include Manrope_bold;
+    font-size: 1.6rem;
+}

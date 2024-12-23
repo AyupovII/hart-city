@@ -1,0 +1,48 @@
+@import '../../styles/index.scss';
+
+.slider__buttons {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.mainSlider {
+    // display: flex;
+    width: 100%;
+    min-width: 100%;
+
+    @include vp_1024 {
+        display: none;
+    }
+
+    & h1 {
+        color: $white;
+        font-weight: 600;
+    }
+}
+
+.mainSlider__slide {
+    // display: flex;
+    // flex-direction: column;
+    // gap: 6.4rem;
+}
+
+.slide__title {
+    margin-bottom: 6.4rem;
+
+    @include vp_1800 {
+        margin-bottom: 4.4rem;
+    }
+
+    @include vp_1280 {
+        margin-bottom: 2rem;
+    }
+}
+
+.mainSlider__pagination {}
+
+.mainSlider__controls {
+    margin-top: 6.4rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}

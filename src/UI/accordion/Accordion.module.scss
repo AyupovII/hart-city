@@ -1,0 +1,43 @@
+@import "../../styles/index.scss";
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.accordion__icon {
+    transition: transform $transition;
+    width: 2.2rem;
+    height: 2.2rem;
+    pointer-events: none;
+}
+
+.accordion__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height $transition;
+}
+
+.accordion__header {
+    cursor: pointer;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.accordion__title {
+    color: $gold;
+    @include Manrope_semibold;
+    font-size: 1.6rem;
+    line-height: normal;
+}
+
+.accordion--open {
+    & .accordion__content {
+        max-height: 100vh;
+    }
+
+    .accordion__icon {
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,53 @@
+@import '../../styles/index.scss';
+
+.notFound__wrapper {
+    background: url('../../assets/img/404.png') no-repeat;
+    height: calc(100dvh - 4.8rem);
+    border-radius: 1.2rem;
+    display: flex;
+    background-size: cover;
+
+    @include vp_1024 {
+        justify-content: center;
+    }
+    @include vp_768 {
+        background: $white;
+    }
+}
+
+.notFound {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: center;
+    @include RubberSize(padding-top, 112, 120, 140);
+    @include RubberSize(padding-left, 120, 70, 20);
+    width: fit-content;
+    @include vp_1024 {
+        padding-left: 0;
+    }
+}
+
+.notFound__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    @include vp_1024 {
+        gap: 2.4rem;
+    }
+}
+
+.notFound__title {
+    @include Manrope_extrabold;
+    font-weight: 800;
+    color: $gold;
+    @include RubberSize(font-size, 260, 200, 140);
+}
+
+.notFound__text {
+    @include Manrope_semibold;
+    color: $blue;
+    @include RubberSize(font-size, 32, 25, 20);
+    line-height: 125%;
+}
