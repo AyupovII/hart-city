@@ -7,6 +7,7 @@ import { useQuery } from 'react-query'
 import { useSearchParams } from 'react-router-dom'
 import { ObjectType } from '../../../types/objects'
 import ObjectsList from '../objectsList/ObjectsList'
+import Loading from '../../loading/Loading'
 const ObjectsListAll: React.FC = () => {
     const [isMobile, setIsMobile] = useState(false)
 
@@ -14,7 +15,7 @@ const ObjectsListAll: React.FC = () => {
     const limit = (searchParams.get('limit') ?? 10) as number;
     const page = (searchParams.get('page') ?? 1) as number;
     const [params, setParams] = useState({ page, limit })
-    const { data, refetch } = useQuery<DataType>('objects', () => getObjects(params))
+    const { data, refetch, isLoading } = useQuery<DataType>('objects', () => getObjects(params))
     const [loadedData, setLoadedData] = useState<ObjectType[]>([])
     const totalPage = Math.ceil((data?.count ?? 0) / limit)
     const showMore = () => {
@@ -42,24 +43,31 @@ const ObjectsListAll: React.FC = () => {
         // setSearchParams({ limit: String(params.limit), page: String(params.page) });
         refetch()
     }, [params.limit, params.page])
+    console.log(isLoading)
     return (
         <div className={style.allObjectsList}>
             <h2 className={style.allObjectsList__title}>Объекты</h2>
-            <ObjectsList objectsList={[...loadedData, ...data?.objects ?? []]} />
-            <div className={`${style.allObjectsList__control}  ${params.page < totalPage && style.allObjectsList__control_active} `}>
-                <p className={style.allObjectsList__text}>{params.page}-{params.limit} из {data?.count} элементов</p>
-                {
-                    params.page < totalPage &&
-                    <Button
-                        className={style.allObjectsList__button}
-                        theme="blue"
-                        size="long"
-                        onClick={showMore}
-                    >
-                        Показать еще
-                    </Button>}
-                {totalPage > 1 && <Pagination limit={params.limit} className={style.allObjectsList__pagination} totalPage={totalPage} isMobile={isMobile} currentPage={params.page} onPagination={setParams} />}
-            </div>
+            {!isLoading ? (
+                <>
+                    <ObjectsList objectsList={[...loadedData, ...data?.objects ?? []]} />
+                    <div className={`${style.allObjectsList__control}  ${params.page < totalPage && style.allObjectsList__control_active} `}>
+                        <p className={style.allObjectsList__text}>{params.page}-{params.limit} из {data?.count} элементов</p>
+                        {
+                            params.page < totalPage &&
+                            <Button
+                                className={style.allObjectsList__button}
+                                theme="blue"
+                                size="long"
+                                onClick={showMore}
+                            >
+                                Показать еще
+                            </Button>}
+                        {totalPage > 1 && <Pagination limit={params.limit} className={style.allObjectsList__pagination} totalPage={totalPage} isMobile={isMobile} currentPage={params.page} onPagination={setParams} />}
+                    </div>
+                </>)
+                : <Loading />}
+
+
         </div>
     )
 }
