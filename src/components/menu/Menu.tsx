@@ -2,7 +2,7 @@ import style from './Menu.module.scss'
 import menuControlIcon from '../../assets/svg/menu-controll.svg'
 import menuNameIcon from '../../assets/svg/menu-name.svg'
 // @ts-ignore
-import MenuIcon from '../../assets/svg/menu-icon.svg/?react'
+import MenuIcon from '../../assets/svg/menu-icon.svg?react'
 import profileImage from '../../assets/img/profile.png'
 import { useContext, useEffect } from 'react'
 import MenuList from '../menuList/MenuList'
